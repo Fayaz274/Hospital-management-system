@@ -1,0 +1,10 @@
+{% extends "superadmin/superadmin_base.html" %}
+{% block content %}
+  <h2>User Details: {{ user.username }}</h2>
+  <p>Username: {{ user.username }}</p>
+  <p>Email: {{ user.email }}</p>
+  <p>Role: {{ user.get_role_display }}</p>
+  <!-- Add more user details fields as needed -->
+  <a href="{% url 'superuser-edit' user.id %}">Edit User</a> 
+  <a href="{% url 'superuser-delete' user.id %}">Delete User</a>
+{% endblock %}

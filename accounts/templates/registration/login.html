@@ -1,0 +1,18 @@
+{% extends "registration/base.html" %}
+
+{% block title %}Log In{% endblock %}
+
+{% block content %}
+<h2>Log In</h2>
+{% comment %} <form method="post" action="{% url 'login' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Log In</button>
+</form> {% endcomment %}
+<form method="post" action="{% url 'custom-login' %}">
+  {% csrf_token %}
+  {{ form.username.label_tag }} {{ form.username }}
+  {{ form.password.label_tag }} {{ form.password }}
+  <button type="submit">Login</button>
+</form>
+{% endblock %}

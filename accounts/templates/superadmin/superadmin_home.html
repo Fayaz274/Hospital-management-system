@@ -1,0 +1,15 @@
+{% extends "superadmin/superadmin_base.html" %}
+
+{% block title %}Superadmin Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome, Superadmin!</h1>
+    
+    <p>You have access to superadmin features and privileges.{{ user.role }}</p>
+
+    <!-- Add links or content specific to the superadmin's home page -->
+
+    <a href="{% url 'superadmin-user-list' %}">View User List</a>
+    
+    
+{% endblock %}
